@@ -1,0 +1,10 @@
+<% 
+  messages = []
+  flash.each do |msg_type, text|
+    messages << text
+  end
+  messages = messages.join('. ')
+%>
+$('#bottom_cart').html("<%= messages %>");
+$('#mobile_flash_area').addClass('ajax-error-message');
+$('#mobile_flash_area').show(100).delay(3000).hide(200);

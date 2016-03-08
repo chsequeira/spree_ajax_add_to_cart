@@ -1,2 +1,5 @@
-$('.link-to-cart').html("<%= j(link_to_cart) %>");
+$('.menu-link-to-cart').html("<%= j(link_to_cart) %>");
 $('#cart-bar').effect('shake', {times: 5, distance:10});
+$('#bottom_cart').html("<%= j(link_to_cart) %>");
+$('#mobile_flash_area').removeClass('ajax-error-message');
+$('#mobile_flash_area').show(100).delay(3000).hide(200);
